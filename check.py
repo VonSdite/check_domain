@@ -54,13 +54,13 @@ def get_client_id():
 
     return x
 
-def get_domain(str, num):
+def get_domain(s, num):
         if(num == 1):
-            for x in str:
+            for x in s:
                 yield x
         else:
-            for x in str:
-                for y in get_domain(str, num-1):
+            for x in s:
+                for y in get_domain(s, num-1):
                     yield x + y
 
 def query(url, data, params):
